@@ -37,4 +37,4 @@ app.put('/image', (req, res) => image.handleImage(req, res, db));
 
 app.post('/imageUrl', (req, res) => image.handleAPICall(req,res));
 
-app.listen(8080, () => console.log('listening to the port: 8080'));
+app.listen(process.env.PORT || 8080, () => console.log(`listening to the port: ${process.env.PORT}`));
