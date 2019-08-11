@@ -25,6 +25,7 @@ const db = knex({
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get('/',(req,res)=> res.json('app is working!'));
 //simplified method signature
 app.post('/signIn', signin.handleSignin(db, bcrypt));
 
